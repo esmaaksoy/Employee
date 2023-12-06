@@ -1,15 +1,25 @@
 import { useState } from 'react';
 import List from './components/List';
 import data from "./helper/data";
+
+
+
 function App() {
   const [index, setIndex] = useState(0);
-  const prevFunc = () => {
-    setIndex((index - 5 + data.length) % data.length);
-  };
+  // const [start, setStart] = useState(5);
+  
+    const prevFunc = () => {
+      if(index<15){
+        setIndex(index+5)
+      }
+   
+    };
+  
   const nextFunc = () => {
-    setIndex((index + 5) % data.length);
+    setIndex(0)
+    prevFunc()
   };
-
+console.log(index)
   return (
     <main>
       <section className="container">
