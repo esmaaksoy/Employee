@@ -1,8 +1,8 @@
-const List = ({person}) => {
+const List = ({data}) => {
 
   return (
     <>
-    {person.map(({name,email,age,image})=>(
+    {data.map(({name,email,age,image})=>(
   <article className="person">
   <img src={image} alt={name} />
   <div>
