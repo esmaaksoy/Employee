@@ -1,5 +1,4 @@
 const List = ({data}) => {
-
   return (
     <>
     {data.map(({name,email,age,image})=>(
