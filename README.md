@@ -1,5 +1,5 @@
 # Employee
-This project is a simple website created using React.
+This project is a simple website created using React and sass.
 ## Screenshots
 ![Project snapshot](./employee.gif) 
 
