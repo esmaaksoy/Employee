@@ -6,20 +6,20 @@ import data from "./helper/data";
 
 function App() {
   const [index, setIndex] = useState(0);
-  // const [start, setStart] = useState(5);
   
-    const prevFunc = () => {
-      if(index<15){
-        setIndex(index+5)
-      }
-   
+  const prevFunc = () => {
+  const newIndex = index - 5;
+    const wrappedIndex = newIndex < 0 ? data.length - 5 : newIndex;
+    setIndex(wrappedIndex);
     };
   
   const nextFunc = () => {
     setIndex(0)
-    prevFunc()
+    if(index<15){
+      setIndex(index+5)
+    }
   };
-console.log(index)
+
   return (
     <main>
       <section className="container">
